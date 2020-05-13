@@ -1,0 +1,6 @@
+My Functions
+1.User can add products to the shopping cart.
+2. Users can purchase the selected products in the shopping cart by selecting the
+payment method (card/cash on delivery, etc.).
+3. Users can create a wish list from their preferred products and later they can add
+those products to the shopping cart.
