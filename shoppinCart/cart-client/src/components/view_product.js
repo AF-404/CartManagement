@@ -91,7 +91,7 @@ class product_view extends React.Component {
                                 <p>Description : { product.description  }</p>
                                 <br/>Quantity : <input type='text' name="quantity" value={this.state.quantity} onChange={this.handleChange} style={{width: "50px"}} /> / { product.quantity }
                                 <div style={{color : "red"}}>{this.state.quantityError}</div><br/>
-                                <br/><button type='button' onClick={() => this.onCart()} class="btn btn-outline-primary">Add to Cart</button>
+                                <br/><button type='button' onClick={() => this.onCart()} class="btn btn-outline-primary"><img src="https://img.icons8.com/bubbles/100/000000/add-shopping-cart.png"/></button>
                                 </td>
                             </tr>
                         )}
