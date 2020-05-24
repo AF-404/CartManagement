@@ -32,8 +32,8 @@ class Payment extends React.Component {
 
     SubmitForm = e => {
         e.preventDefault();
-        const isValid = this.validation();
-        if(isValid){
+        const correctAll = this.validation();
+        if(correctAll){
             console.log(this.state);
             cartApi.cart().update(localStorage.getItem('cartId'),{ type: 'order' , payment: 'paid' })
             .then(res =>{
@@ -43,7 +43,7 @@ class Payment extends React.Component {
         }
     }
 
-    onCach(){
+    onPayments(){
         cartApi.cart().update(localStorage.getItem('cartId'),{ type: 'order' , payment: 'Cash On Deliver' })
         .then(res =>{
             swal("Success!", "Order Successful!", "success")
@@ -141,18 +141,18 @@ class Payment extends React.Component {
                             <div class="col-md-6">
                                 <select class="form-control" name="month" value={this.state.month} onChange={this.handleChange}>
                                     <option value="">~select~</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
                                 </select>
                                 <div style={{color : "red"}}>{this.state.monthError}</div>
                             </div>
@@ -168,7 +168,7 @@ class Payment extends React.Component {
                     
                         <div class="col-md-4 offset-md-4">
                             <input type="submit" class="btn btn-outline-primary" value="Pay" /><br/><br/>
-                            <input type="button" class="btn btn-outline-success" value="Cash On Deliver" onClick={() => this.onCach()} />
+                            <input type="button" class="btn btn-outline-success" value="Cash On Deliver" onClick={() => this.onPayments()} />
                         </div>
                     </form>
                 </div>
