@@ -10,7 +10,7 @@ router.get('/',(req,res)=>{
         if(!err){
             res.send(docs)
         }else{
-            console.log('Error while retrieving all records : '+JSON.stringify(err,undefined,2))
+            console.log(JSON.stringify(err,undefined,2))
         }
     })
 })
@@ -32,14 +32,14 @@ router.post('/',(req,res)=>{
         if(!err){
             res.send(docs)
         }else{
-            console.log('Error while creating new records : '+JSON.stringify(err,undefined,2))
+            console.log(JSON.stringify(err,undefined,2))
         }
     })
 })
 
 router.put('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){
-        return res.status(400).send('No record with given id : '+req.params.id)
+        return res.status(400).send(req.params.id)
     }
 
     var updateRecords={
@@ -51,21 +51,21 @@ router.put('/:id',(req,res)=>{
         if(!err){
             res.send(docs)
         }else{
-            console.log('Error while updating records : '+JSON.stringify(err,undefined,2))
+            console.log(JSON.stringify(err,undefined,2))
         }
     })
 })
 
 router.delete('/:id',(req,res)=>{
     if(!ObjectID.isValid(req.params.id)){
-        return res.status(400).send('No record with given id : '+req.params.id)
+        return res.status(400).send(req.params.id)
     }
 
     cart.findByIdAndRemove(req.params.id,(err,docs)=>{
         if(!err){
             res.send(docs)
         }else{
-            console.log('Error while updating records : '+JSON.stringify(err,undefined,2))
+            console.log(JSON.stringify(err,undefined,2))
         }
     })
 })
