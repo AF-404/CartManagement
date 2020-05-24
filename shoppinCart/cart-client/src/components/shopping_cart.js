@@ -68,8 +68,8 @@ class myCart extends React.Component {
                             <tr>
                                 <td class="tableTh" width="25%"><img width="200px" alt="" src={ "http://localhost:3500/"+cart.p_image } class="img-thumbnail" /></td>
                                 <td class="tableTh" width="60%"><h3>{ cart.p_name  }</h3><br/><h5>Price: Rs. { cart.p_price } / Discount: Rs. { cart.p_discount }</h5><br/><h5>Total: Rs. { cart.total } / Quantity: { cart.p_quantity }</h5></td>
-                                <td class="tableTh" width="15%"><button type='button' onClick={() => this.onBuy(cart._id)} class="btn btn-outline-primary">BUY</button>
-                                    <button type='button' onClick={() => this.onDelete(cart._id)} class="btn btn-outline-danger">Remove</button>
+                                <td class="tableTh" width="15%"><button type='button' onClick={() => this.onBuy(cart._id)} class="btn btn-outline-primary"><img src="https://img.icons8.com/bubbles/50/000000/buy.png"/></button>
+                                    <button type='button' onClick={() => this.onDelete(cart._id)} class="btn btn-outline-danger"><img src="https://img.icons8.com/bubbles/50/000000/delete.png"/></button>
                                 </td>
                             </tr>
                         )}
