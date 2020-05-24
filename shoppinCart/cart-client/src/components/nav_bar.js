@@ -15,13 +15,14 @@ class nav extends React.Component {
       if(localStorage.getItem('type')==="admin"){
         return (
           <Navbar bg="secondary" variant="dark">
-            <Navbar.Brand href="/">STORE</Navbar.Brand>
+            <Navbar.Brand href="/"><img src="https://img.icons8.com/bubbles/50/000000/product.png"/></Navbar.Brand>
       
             <Navbar.Collapse class="collapse navbar-collapse">
               <Nav class="navbar-nav ml-auto">
-                <Nav.Link href="/usersList" >Users</Nav.Link>
-                <Nav.Link href="/category" >Category</Nav.Link>
-                <Nav.Link onClick={ this.Logout } >Logout</Nav.Link>
+                <Nav.Link href="/usersList" ><img src="https://img.icons8.com/bubbles/50/000000/conference-call.png"/></Nav.Link>
+                <Nav.Link href="/product" ><img src="https://img.icons8.com/bubbles/50/000000/price-tag.png"/></Nav.Link>
+                <Nav.Link href="/category" ><img src="https://img.icons8.com/bubbles/50/000000/ingredients.png"/></Nav.Link>
+                <Nav.Link onClick={ this.Logout } ><img src="https://img.icons8.com/bubbles/50/000000/exit.png"/></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -29,12 +30,12 @@ class nav extends React.Component {
       }else if(localStorage.getItem('type')==="sm"){
         return (
           <Navbar bg="secondary" variant="dark">
-            <Navbar.Brand href="/">STORE</Navbar.Brand>
+            <Navbar.Brand href="/"><img src="https://img.icons8.com/bubbles/50/000000/product.png"/></Navbar.Brand>
       
             <Navbar.Collapse class="collapse navbar-collapse">
               <Nav class="navbar-nav ml-auto">
-                <Nav.Link href="/product" >Product</Nav.Link>
-                <Nav.Link onClick={ this.Logout } >Logout</Nav.Link>
+                <Nav.Link href="/product" ><img src="https://img.icons8.com/bubbles/50/000000/price-tag.png"/></Nav.Link>
+                <Nav.Link onClick={ this.Logout } ><img src="https://img.icons8.com/bubbles/50/000000/exit.png"/></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -42,12 +43,13 @@ class nav extends React.Component {
       }else{
         return (
           <Navbar bg="secondary" variant="dark">
-            <Navbar.Brand href="/">STORE</Navbar.Brand>
+            <Navbar.Brand href="/"><img src="https://img.icons8.com/bubbles/50/000000/product.png"/></Navbar.Brand>
       
             <Navbar.Collapse class="collapse navbar-collapse">
               <Nav class="navbar-nav ml-auto">
-                <Nav.Link href="/cart" >Shopping Cart</Nav.Link>
-                <Nav.Link onClick={ this.Logout } >Logout</Nav.Link>
+                <Nav.Link href="/cart" ><img src="https://img.icons8.com/bubbles/50/000000/shopping-cart.png"/></Nav.Link>
+                <Nav.Link href="/order" ><img src="https://img.icons8.com/bubbles/50/000000/used-product.png"/></Nav.Link>
+                <Nav.Link onClick={ this.Logout } ><img src="https://img.icons8.com/bubbles/50/000000/exit.png"/></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -56,12 +58,12 @@ class nav extends React.Component {
     }else{
       return (
         <Navbar bg="secondary" variant="dark">
-          <Navbar.Brand href="/">STORE</Navbar.Brand>
+          <Navbar.Brand href="/"><img src="https://img.icons8.com/bubbles/50/000000/product.png"/></Navbar.Brand>
     
           <Navbar.Collapse class="collapse navbar-collapse">
             <Nav class="navbar-nav ml-auto">
-              <Nav.Link href="/login">Login</Nav.Link>
-              <Nav.Link href="/register">Register</Nav.Link>
+              <Nav.Link href="/login"><img src="https://img.icons8.com/bubbles/50/000000/login-rounded-right.png"/></Nav.Link>
+              <Nav.Link href="/register"><img src="https://img.icons8.com/bubbles/50/000000/add-file.png"/></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
